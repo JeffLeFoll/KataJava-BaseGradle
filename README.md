@@ -1,2 +1,2 @@
-# KataJava-gradle
-structure de projet gradle vide pour démarer un kata java (pour les coding dojo) avec les bonnes dépendences.
+# KataJava-BaseGradle
+Structure de projet gradle vide pour démarer un kata java (pour les coding dojo) avec les bonnes dépendences.
