@@ -1,5 +1,9 @@
-.gradle
+.gradle/
 build/
+
+#Fichiers Intellij
+.idea
+KataJava-BaseGradle.iml
 
 # Ignore Gradle GUI config
 gradle-app.setting

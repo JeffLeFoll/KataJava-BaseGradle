@@ -31,4 +31,16 @@ public class PokerTest {
 
         assertThat(carteLaPlusForte).isEqualToComparingFieldByField(new Carte("C", Valeur.CA));
     }
+
+    @Test
+    public void doitDetecterUnPaire() {
+        Main main = new Main();
+        main.ajouterCarte(new Carte("C", Valeur.C2));
+        main.ajouterCarte(new Carte("C", Valeur.C4));
+        main.ajouterCarte(new Carte("C", Valeur.CA));
+        main.ajouterCarte(new Carte("C", Valeur.C6));
+        main.ajouterCarte(new Carte("H", Valeur.C6));
+
+        assertThat(main.existePaire()).isTrue();
+    }
 }

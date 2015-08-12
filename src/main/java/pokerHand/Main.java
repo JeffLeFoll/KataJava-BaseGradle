@@ -17,6 +17,21 @@ public class Main {
     }
 
     public Optional<Carte> carteLaPlusHaute() {
-        return cartes.stream().max((carte1, carte2) -> carte1.getValeur().poids() - carte2.getValeur().poids());
+        return cartes.stream()
+                .max((carte1, carte2) -> carte1.getValeur().poids() - carte2.getValeur().poids());
+    }
+
+    public boolean existePaire() {
+        for (Carte carte : this.cartes) {
+            long nombreDeCarteDeCetteValeur = cartes.stream()
+                    .filter(carteDeLaMain -> carteDeLaMain.getValeur().equals(carte.getValeur()))
+                    .count();
+
+            if (nombreDeCarteDeCetteValeur == 2) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
