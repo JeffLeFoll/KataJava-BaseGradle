@@ -118,7 +118,6 @@ public class PokerTest {
     }
 
 
-    @Test
     public void doitComparerDeuxMains() {
 
         JeuxDePoker jeuxDePoker = new JeuxDePoker();
