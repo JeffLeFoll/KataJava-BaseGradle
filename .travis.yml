@@ -4,3 +4,8 @@ jdk:
 
 before_install:
   - chmod +x gradlew
+  
+notifications:
+  slack:
+    rooms:
+      - codingdojo-cap-brest:Cz6bayfmZ2PvQhDrirs7Ifxo#kata-pokerhands
