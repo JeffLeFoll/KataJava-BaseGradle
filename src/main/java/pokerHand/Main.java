@@ -109,4 +109,29 @@ public class Main {
     public boolean existeQuinteFlush() {
           return existeSuite() && existeCouleur();
             }
+
+    public CombinaisonDeCarte determinerLaCombinaisonLaPlusforte() {
+        if (this.existeQuinteFlush()) {
+            return CombinaisonDeCarte.QUINTE;
+        }
+        if (this.existeCouleur()) {
+            return CombinaisonDeCarte.COULEUR;
+        }
+        if (this.existeSuite()){
+            return CombinaisonDeCarte.SUITE;
+        }
+        if (this.existeCarre()) {
+            return CombinaisonDeCarte.CARRE;
+        }
+        if (this.existeBrelan()) {
+            return CombinaisonDeCarte.BRELAN;
+        }
+        if (this.existeTriplette()) {
+            return CombinaisonDeCarte.TRIPLETTE;
+        }
+        if (this.existePaire()) {
+            return CombinaisonDeCarte.PAIRE;
+        }
+        return null;
+    }
 }
