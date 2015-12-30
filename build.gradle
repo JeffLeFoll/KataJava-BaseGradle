@@ -2,6 +2,8 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 version = '1.0'
 
 repositories {
@@ -22,6 +24,13 @@ dependencies {
     compile 'com.google.guava:guava:18.0'
 }
 
+test {
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat = 'full'
+    }
+}
+
 tasks.withType(JavaCompile) { 
 	options.encoding = "UTF-8" 
 }
@@ -29,3 +38,5 @@ tasks.withType(JavaCompile) {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
+
+defaultTasks 'clean', 'test'
